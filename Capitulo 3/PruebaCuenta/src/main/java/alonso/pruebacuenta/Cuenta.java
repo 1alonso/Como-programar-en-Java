@@ -4,22 +4,26 @@
  */
 package alonso.pruebacuenta;
 
-// Fig. 3.1: Cuenta.java
-// Clase Cuenta que contiene una variable de instancia llamada nombre
-// y metodos para establecer y obtener su valor.
+// Fig.3.5: Cuenta.java
+// Clase Cuenta con un constructor que inicializa el nombre.
 
 public class Cuenta {
-    private String nombre; // variable de instancia
+    private String nombre;// variable de instancia
+    // el constructor inicializa nombre con el parametro nombre
+    public Cuenta(String nombre)// el nombre del constructor es el nombre de la clase
+    {
+        this.nombre = nombre;
+    }
     
-    // metodo para establecer el nombre en el objeto
+    // metodo para establecer el nombre
     public void establecerNombre(String nombre)
     {
-        this.nombre = nombre; // almacenar el nombre
+        this.nombre = nombre;
     }
     
-    //metodo para obtener el nombre del objeto
+    // metodos para recuperar el nombre 
     public String obtenerNombre()
     {
-        return nombre; // devuelve el valor de nombre a quien lo invoco
+        return nombre;
     }
-}
+}// din de la clase Cuenta

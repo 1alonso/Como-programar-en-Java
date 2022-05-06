@@ -5,31 +5,18 @@
 
 package alonso.pruebacuenta;
 
-// Fig. 3.2 PruebaCuenta.java
-// Crear y manipular un objeto Cuenta
-
-import java.util.Scanner;
-
+// Fig. 3.6: PruebaCuanta.java
+// Uso del constructor de Cuenta para inicializar la variable de instancia
+// nombre al momento de crear el objeto Cuenta
 public class PruebaCuenta {
 
     public static void main(String[] args) {
-        // crea un objeto Scanner para obtener la entrada desde el simbolo del sistema
-        Scanner entrada = new Scanner(System.in);
+        // crear dos objetos Cuenta
+        Cuenta cuenta1 = new Cuenta("Jane Green");
+        Cuenta cuenta2 = new Cuenta("John Blue");
         
-        // crea un objeto Cuenta y lo asigna a miCuenta
-        Cuenta miCuenta = new Cuenta();
-        
-        //muestra el valor inicial del nombre (null)
-        System.out.printf("El nombre inicial es: %s%n%n ", miCuenta.obtenerNombre());
-        
-        //pide y lee el nombre
-        System.out.println("Introduzca el nombre: ");
-        String elNombre = entrada.nextLine(); // lee una linea de texto
-        miCuenta.establecerNombre(elNombre); // coloca elNombre en miCuenta
-        System.out.println(); // imprime una linea en blanco
-        
-        // muestra el nombre alamacenado en el objeto miCuenta
-        System.out.printf("El nombre en el objeto miCuenta es%n%s%n",
-                miCuenta.obtenerNombre());
+        // muestra el valor inicial  de nombre para cada Cuenta
+        System.out.printf("El nombre de cuenta1 es: %s%n", cuenta1.obtenerNombre());
+        System.out.printf("El nombre de cuenta2 es: %s%n", cuenta2.obtenerNombre());
     }
 } // fin de la clase PruebaCuenta
